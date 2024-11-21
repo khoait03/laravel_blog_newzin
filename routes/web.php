@@ -20,6 +20,10 @@ use App\Http\Controllers\Backend\CategoryController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::group(['middleware' => 'license'], function () {
+
+
 Route::get('/', [HomeController::class, 'home'])->name('client.home');
 
 Route::get('auth/google', [ClientAuthController::class, 'redirectToGoogle'])->name('auth.google');
@@ -93,6 +97,14 @@ Route::prefix('panel')->group(function() {
 
 });
 
+
+});
+
 //Route::get('/test', function () {
 //    return view('welcome');
 //});
+
+
+Route::get('/tiny/cloud', function() {
+    return view('backend.license.index');
+})->name('license');

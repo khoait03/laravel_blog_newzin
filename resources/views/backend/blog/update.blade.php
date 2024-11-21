@@ -233,26 +233,23 @@
 
     {{-- 
         API Key tinymce
-        VD: ub9wru4c8z57hio4z5170jv0k4zik8cf4e6moqfnhktv4umz
+        VD: q29qrmu64ttnk5yruzgm0g9pu6g45say6pgu4wkod931vefi
         
     --}}
-    <script src="https://cdn.tiny.cloud/1/ub9wru4c8z57hio4z5170jv0k4zik8cf4e6moqfnhktv4umz/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    
 
+    <!-- Place the first <script> tag in your HTML's <head> -->
+    <script src="https://cdn.tiny.cloud/1/q29qrmu64ttnk5yruzgm0g9pu6g45say6pgu4wkod931vefi/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <!-- Place the following <script> and <textarea> tags your HTML's <body> -->
     <script>
-        tinymce.init({
-            selector: '.tinymce',
-            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
-            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough forecolor backcolor | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-            tinycomments_mode: 'embedded',
-            tinycomments_author: 'Author name',
-            mergetags_list: [
-                { value: 'First.Name', title: 'First Name' },
-                { value: 'Email', title: 'Email' },
-            ],
-
-            ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
-        });
+    tinymce.init({
+        selector: '.tinymce',
+        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+    });
     </script>
+
 
 
 @endsection
